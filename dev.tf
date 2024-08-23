@@ -22,8 +22,8 @@ provisioner "remote-exec" {
         "pip install virtualenv",
         "python3 -m venv /home/ubuntu/kumar",
         ". /home/ubuntu/kumar/bin/activate",
-        "git clone https://github.com/Praveenchinna14/teerdha19.git",
-        "cd teerdha19",
+        "git clone https://github.com/Praveenchinna14/teerdha22.git",
+        "cd teerdha22",
         "sudo apt install libmysqlclient-dev -y",
         "sudo apt install pkg-config -y",
         "pip install -r requirements.txt",
@@ -34,9 +34,9 @@ provisioner "remote-exec" {
         "pip install pyscopg2-binary",
         "pip install wheel",
         "pip install pillow",
-        "python3 /home/ubuntu/teerdha19/manage.py makemigrations",
-        "python3 /home/ubuntu/teerdha19/manage.py migrate",
-        "python3 /home/ubuntu/teerdha19/manage.py runserver 0.0.0.0:8000"     
+        "python3 /home/ubuntu/teerdha22/manage.py makemigrations",
+        "python3 /home/ubuntu/teerdha22/manage.py migrate",
+        "python3 /home/ubuntu/teerdha22/manage.py runserver 0.0.0.0:8000"     
     ]
     connection {
       type     = "ssh"
