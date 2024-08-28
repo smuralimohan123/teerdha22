@@ -1,3 +1,13 @@
+FROM ubuntu:latest
+
+RUN apt update
+
+RUN apt install libmysqlclient-dev -y
+
+RUN apt install pkg-config -y
+
+CMD ["bash"]
+
 FROM python:3.11
 
 ENV PYTHONUNBUFFERED 1
@@ -8,25 +18,21 @@ WORKDIR /teerdhanew
 
 COPY requirements.txt .
 
-RUN sudo apt install libmysqlclient-dev -y && 
+RUN pip install -r requirements.txt
 
-RUN sudo apt install pkg-config -y && 
+RUN pip install django
 
-RUN pip install -r requirements.txt && 
+RUN pip install django-rest-framework
 
-RUN pip install django && 
+RUN pip install mysqlclient
 
-RUN pip install django-rest-framework && 
+RUN pip install requests
 
-RUN pip install mysqlclient && 
+RUN pip install psycopg2-binary
 
-RUN pip install requests && 
+RUN pip install wheel
 
-RUN pip install psycopg2-binary && 
-
-RUN pip install wheel && 
-
-RUN pip install pillow && 
+RUN pip install pillow
 
 COPY . .
 
