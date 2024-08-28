@@ -82,11 +82,11 @@ WSGI_APPLICATION = 'Teerdhaproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'teerdhanew',
+        'NAME':'teerdha23',
         'POST':'3306',
-        'PASSWORD':'admin123',
-        'HOST':'teerdhanew.cxciyc0oo3rh.ap-south-1.rds.amazonaws.com',
-        'USER':'admin'
+        'PASSWORD':'murali12345',
+        'HOST':'teerdha.cxyimkgiwbto.us-west-1.rds.amazonaws.com',
+        'USER':'admin123'
     }
 }
 
@@ -142,5 +142,5 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'developtrees1@gmail.com'
 EMAIL_HOST_PASSWORD = 'qvwqbjcxpvaysbjk'
 
-API_URL = 'http://127.0.0.1:8000'
+API_URL = 'http://54.176.223.86:8000'
 
